@@ -20,6 +20,13 @@ class HomeTableViewController: UITableViewController {
         loadTweets()
         myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 150
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadTweets()
     }
     
     @objc func loadTweets(){
@@ -79,8 +86,11 @@ class HomeTableViewController: UITableViewController {
         let user = tweetArray[indexPath.row]["user"] as! NSDictionary
         
         //set username and tweet content
-        cell.usernameLabel.text = user["name"] as? String
+        cell.nameLabel.text = user["name"] as? String
         cell.tweetLabel.text = tweetArray[indexPath.row]["text"] as? String
+        //getting the user's handle
+        let userHandle =  user["screen_name"]
+        cell.twitterHandleLabel.text = "@" + (userHandle as! String) as? String
         
         //set profile picture of tweet
         let imageUrl = URL(string: (user["profile_image_url_https"] as? String)!)
@@ -89,11 +99,11 @@ class HomeTableViewController: UITableViewController {
             cell.profilePicView.image = UIImage(data: imageData)
         }
         
-        
+        cell.setFavoriteImage(tweetArray[indexPath.row]["favorited"] as! Bool)
+        cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
+        cell.setRetweeted(tweetArray[indexPath.row]["retweeted"] as! Bool)
         return cell
     }
-    
-    
     
     
     
