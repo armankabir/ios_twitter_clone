@@ -1,3 +1,33 @@
+# Twitter - Part II
+
+This is a basic twitter app to view, compose, favorite, and retweet tweets.
+
+Time spent: **5** hours spent in total
+
+## User Stories
+
+The following **required** functionality is completed:
+
+- [X] User can compose a tweet. (4pts)
+- [X] User can favorite a tweet. (4pts)
+- [X] User can retweet a tweet. (2pts)
+
+The following **bonus** features are implemented:
+
+- [ ] When composing a tweet, user sees a countdown for the number of characters remaining for the tweet (out of 280) (2pts)
+- [ ] User can view their profile in a profile tab. (3pts)
+- [ ] User sees embedded images in tweet if available. (3pts)
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+### Demonstration of Composing and Publishing a Tweet
+<img src='https://user-images.githubusercontent.com/47779642/99140617-5ce8eb00-2611-11eb-882d-f86cde42f6a3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /> </br>
+
+### Demonstatrion of Liking and Retweeting a Tweet
+<img src='https://user-images.githubusercontent.com/47779642/99140620-5e1a1800-2611-11eb-8265-0f19d912bff5.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /> </br>
+
 # Project 3 - Viewer for Tweeters
 
 "Viewer for Tweeters" is a basic twitter app to read your tweets.
